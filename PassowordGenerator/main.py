@@ -2,4 +2,10 @@ from src.pass_gen import password_generator
 
 
 if __name__ == "__main__":
-    print(password_generator(min_length=8,number=False,special_character=False))
+    min_length=int(input("Enter the minimum length:"))
+    number=input("Do you want to have (y/n)?").lower() == 'y'
+    special_character=input("Do you want to have special Character (y/n)").lower() =='y'
+
+
+    my_pass=password_generator(min_length=min_length,number=number,special_character=special_character)
+    print(my_pass)
